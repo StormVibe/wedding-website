@@ -1,3 +1,7 @@
+# My private repo of this website
+this is a fork of the project detailed below. updated a few things
+this is a work in progresss still though
+
 # Wedding Website
 A beautiful, feature rich, device friendly wedding website.  
 _See [wedding.rampatra.com](http://wedding.rampatra.com/) for a demo. Use invite code `271117` to RSVP._
