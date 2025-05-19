@@ -6,7 +6,7 @@
     <title>Nick ❤ Divna</title>
     <meta name="description" content="We would like to invite you to our big day.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="lightblue">
     <meta property="og:title" content="Nick ❤ Divna">
     <meta property="og:description" content="We would like to invite you to our big day.">
     <meta property="og:image" content="img/hero-min.jpg">
@@ -52,11 +52,7 @@
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
-<body id="top">
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+<body id="top" style="background-image: linear-gradient(lightblue, white);">
 <section class="hero">
     <section class="navigation">
         <header>
@@ -67,12 +63,12 @@
                         <ul class="primary-nav">
                             <li><a href="#intro">How we met</a></li>
                             <li><a href="#orthodox_wedding">What to Expect at an Orthodox Wedding</a></li>
-                            <li><a href="#instagram">Events (TBD)</a></li>
+                            <li><a href="#events">Events (TBD)</a></li>
                             <li><a href="#eng-pics">Engagement</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of an Orthodox Wedding	</a></li>
+                            <li class="hidden-sm hidden-xs"><a href="./blog/blog.html">Blog - See for updates!</a></li>
+                            <li><a href="#map" class="login">Venue</a></li>
                         </ul>
                         <ul class="member-actions">
-                            <li><a href="#map" class="login">Venue</a></li>
                             <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                         </ul>
                     </nav>
@@ -87,10 +83,6 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="hero-content text-center">
-                    <!--<h1>Work In Progress</h1>
-                    <img src="img/logo-lg.png"
-                    <p class="intro">Nick & Divna are getting hitched!</p>
-                    <a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a><br>-->
                 </div>
             </div>
         </div>
@@ -98,8 +90,9 @@
     <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
             <div class="row">
             <div class="col-sm-4 hidden-xs"></div>
-            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
-                                                           class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+            <div class="col-sm-4 hidden-xs text-center">
+				<a href="#rsvp" class="btn btn-accent btn-large rsvp-btn">RSVP</a>
+			</div>
             <div class="col-sm-4 hidden-xs"></div>
         </div>
 </section>
@@ -108,10 +101,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-				<h5>this is a work in progress</h5>
+				<h5></h5>
                 <h3>We are getting hitched!</h3>
                 <p>The date is still TBD. 
-					We are hopeful for summer of 2025.</p>
+					We are hopeful for either before the nativity fast of 2025 (Oct/Nov 2025) or shortly thereafter (Jan/Feb 2026).</p>
 				<p>We will update here once we know more!</p>
                 <div class="share-bar"></div>
             </div>
@@ -119,7 +112,83 @@
     </div>
 </section>
 
-<section id="intro">
+<section class="rsvp text-center" id="rsvp" style="background-color: lightgrey;">
+
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Thank you!</h3>
+                        <p>We are glad to see you join us on our big day.</p>
+                        <div id="add-to-cal"></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>RSVP</h3>
+                <p>If you feel that you will most likely attend, please RSVP
+                <br>If at a later time you are unable, just let us know
+                <br>You can also subscribe to our mailing list 
+                <a href="./blog/blog.html#mail"><b>here</b></a></p>
+                <form id="rsvp-form" class="rsvp-form"
+                      action=""
+                      method="POST">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
+                                                                     placeholder="Your email"
+                                                                     required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="Your name"
+                                                                 required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="1"
+                                                                  max="8"
+                                                                  placeholder="You +?"
+                                                                  required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                                                class="" min="0"
+                                                                placeholder="Invite code"
+                                                                required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <button class="btn-fill rsvp-btn">
+                        Yes,
+                        that's me!
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="intro" style="linear-gradient(lightblue, light);" >
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -149,7 +218,7 @@
     </div>
 </section>
 
-<section id="orthodox_wedding" class="section-padding">
+<section id="orthodox_wedding" class="section-padding" style="background-image: linear-gradient(lightblue, light);" >
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -214,8 +283,8 @@
         </div>
     </div>
 </section>
-
-<section class="events section-padding" id="events">
+<!-- style="background-image: linear-gradient(light, #0339fc);"  -->
+<section class="events section-padding" id="events" style="background-image: linear-gradient(white, lightblue);">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -225,12 +294,12 @@
         <div class="row">
             <div class="col-md-6 col-sm-12 col-xs-12 lefcol">
                 <div class="wp3">
-                    <p><strong>Summer 2025!</strong></p>
+                    <p><strong>Oct/Nov 2025 or Jan/Feb 2026 (Hopefully) </strong></p>
 
                     <h5>Date TBD, but will be on a Sunday between <span class="time">3PM-4:30PM</span></h5>
                     <p>We are working on getting Divna's VISA application to be approved
-                    We are hopeful for a Summer 2025 wedding, but the date is subject to 
-                    change. We will keep you posted here.
+                    We are hopeful for a sometime before or after the nativity fast, but 
+                    the date is subject to change. We will keep you posted here.
                     Stay tuned for more details to come!</p>
                 </div>
                 <div class="wp5">
@@ -254,11 +323,10 @@
                 </a>
             </div>
         </div>
-        <!--<div class="row">
+     <div class="row">
             <div class="col-xs-12 section-border section-padding">
             </div>
-        </div>-- >
--->
+        </div>
     </div>
 
     <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
@@ -267,34 +335,24 @@
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
-                    <h3 class="text-center section-padding">Ugh... dress codes?</h3>
-                    <h5>Wedding <span class="time">3PM - 4:30PM</span></h5>
+                    <h3 class="text-center section-padding">Business Casual if you can</h3>
+                    <h5>Wedding <span class="time">3:00 PM - 4:00 PM</span></h5>
                     <p>
                         <strong>Business Casual encouraged</strong>
                         <br>
-                        Honestly, so long as you don't show skin, you can come however you'd like.
+                        Honestly, so long as you don't show a lot of skin, you can come however you'd like.
                         <br>
-                        Generally speaking in Orthodox services, there is a standard of attire. Just keep in mind
-                        that this is the Lord's house, so please dress moderately. 
+                        Just keep in mind that this is the Lord's house, so please dress moderately. 
                         <br><br>
-                        We ask that:<br>
-                        <strong>Men</strong> should wear long pants and short or long sleeve shirts. Suits and/or ties
-                        are optional.Please avoid wearing shorts and laity should not wear hats inside the church, 
-                        but we won't turn you away. 
-                        <br>
-                        <strong>Women</strong> should wear dresses at the knee or below the knee. Also, while not
-                        required, women usually cover their hair with a head scarf. Please avoid  spaghetti strings or
-                        too exposing attire, and you should be fine. Again, we won't turn you away. 
-                        <br>
                     </p>
-                    <h5>Reception <span class="time">6PM-12AM</span></h5>
+                    <h5>Reception <span class="time">6PM-10PM</span></h5>
                     <p>
                         <strong>Casual or Business Casual</strong>
                         <br>
                         The reception will be available for any and all to come. It will likely be 
                         brief, but there will be food and drink. We are still looking for a venue
                         for the reception, but once we know who's coming, we will be able to keep
-                        you updated.                      
+                        you updated. 
                     </p>
                 </div>
             </div><!-- /.modal-content -->
@@ -320,6 +378,49 @@
     </div>
 </section>
 -->
+<section id="map" class="section-padding">
+    <div class="text-center">
+        <h3>How do I get there?</h3>
+        <p>It's way easier than you think!</p>
+        <h4>Wedding Location:</h4>
+        <h5>St Gregory of Nyssa Orthodox Church</h5>
+        <p>2219 Summit St., Columbus, Ohio 43201</p>
+    </div>
+    <div id="map-canvas"></div>
+    <div id="map-content-wrapper" class="container pointer-events-none">
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
+                <div class="text-center">
+                    <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
+                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
+                    </div>
+                </div>
+                <div id="map-content" class="pointer-events-auto">
+                    <div class="row">
+                        <div class="col-md-6">
+							<h3>Wedding Location</h3>
+                            <h5>St Gregory of Nyssa Orthodox Church</h5>
+                            <p><i class="fa fa-bell"></i> <a>2219 Summit St., Columbus, Ohio 43201</a><br>
+                            <div class="col-md-6" style="padding: 5px;">
+                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
+                                map</a>
+							</div>
+                        </div>
+                        <div class="col-md-6">
+							<h3>Reception Location</h3>
+                            <h5>TBD</h5>
+                            <p><i class="fa fa-gamepad"></i> <a>TBD</a><br>
+                        </div>
+						</div>
+
+                        
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="eng-pics" class="section-padding">
     <div class="container-fluid">
         <div class="row">
@@ -434,122 +535,6 @@
     <div id="video-content">
         <h3></h3>
         <p>What an Orthodox wedding looks like</p>
-    </div>
-</section>
-
-<section id="map" class="section-padding">
-    <div class="text-center">
-        <h3>How do I get there?</h3>
-        <p>It's way easier than you think!</p>
-        <h4>Wedding Location:</h4>
-        <h5>St Gregory of Nyssa Orthodox Church</h5>
-        <p>2219 Summit St., Columbus, Ohio 43201</p>
-    </div>
-    <div id="map-canvas"></div>
-    <div id="map-content-wrapper" class="container pointer-events-none">
-        <div class="row">
-            <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
-                <div class="text-center">
-                    <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
-                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
-                    </div>
-                </div>
-                <div id="map-content" class="pointer-events-auto">
-                    <div class="row">
-                        <div class="col-md-6">
-							<h3>Wedding Location</h3>
-                            <h5>St Gregory of Nyssa Orthodox Church</h5>
-                            <p><i class="fa fa-bell"></i> <a>2219 Summit St., Columbus, Ohio 43201</a><br>
-                            <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
-                                map</a>
-							</div>
-                        </div>
-                        <div class="col-md-6">
-							<h3>Reception Location</h3>
-                            <h5>TBD</h5>
-                            <p><i class="fa fa-gamepad"></i> <a>TBD</a><br>
-                        </div>
-						</div>
-
-                        
-                   </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="rsvp text-center" id="rsvp">
-
-    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
-                    </div>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 1st of November '17</p>
-                <form id="rsvp-form" class="rsvp-form"
-                      action=""
-                      method="POST">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
-                                                                     required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Husband/Wife or kids"
-                                                                  required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" id="alert-wrapper"></div>
-                    </div>
-                    <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
-                    </button>
-                </form>
-            </div>
-        </div>
     </div>
 </section>
 
